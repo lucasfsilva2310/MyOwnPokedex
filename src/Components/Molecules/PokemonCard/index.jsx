@@ -1,11 +1,24 @@
 import "./Cards.css";
+// import { useHistory } from "react-router-dom";
+// import { useDispatch } from "react-redux";
+// import { CharacterThunk } from "../../../store/modules/descriptionPokemon/thunks";
 
-const PokemonCard = ({ pokemon }) => {
+const PokemonCard = ({ pokemon, func }) => {
+  // const history = useHistory();
+  // const dispatch = useDispatch();
   // Sprite pokemon
   let img = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`;
   return (
     <>
-      <div className={`containerPokemon ${pokemon.types[0].type.name}`}>
+      <div
+        className={`containerPokemon ${pokemon.types[0].type.name}`}
+        onClick={func}
+        // {
+        //   console.log(pokemon);
+        //   dispatch(CharacterThunk({ pokemon }));
+        //   history.push("/description");
+        // }
+      >
         <div>
           <img
             className="pokemonSprite circle-icon"

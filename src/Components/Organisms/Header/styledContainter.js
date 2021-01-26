@@ -7,8 +7,8 @@ export const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: fixed; // esta funcionando?
+  /* position: fixed; // esta funcionando? */
   top: 0%;
   width: 100%;
-  height: 30%; ;
+  height: 50%; ;
 `;

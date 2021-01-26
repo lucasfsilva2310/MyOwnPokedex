@@ -10,10 +10,18 @@ import PokemonList from "./Components/Organisms/PokemonList/index";
 function App() {
   return (
     <>
-      <MainHeader />
-      <MainContainer>
-        <PokemonList />
-      </MainContainer>
+      <Switch>
+        <Route exact path="/">
+          <MainHeader />
+          <MainContainer>
+            <PokemonList />
+          </MainContainer>
+        </Route>
+        <Route exact path="/description">
+          <MainHeader />
+          <h1>Oi</h1>
+        </Route>
+      </Switch>
     </>
   );
 }
