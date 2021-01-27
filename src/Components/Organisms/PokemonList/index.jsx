@@ -5,12 +5,15 @@ import { LoadingContainer } from "./styled";
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { CharacterThunk } from "../../../store/modules/descriptionPokemon/thunks";
+import { useSelector } from "react-redux";
 
 const PokemonList = () => {
   const [pokemonList, setPokemonList] = useState([]);
   const [nextPokemonUrl, setNextPokemonUrl] = useState(1);
   const history = useHistory();
   const dispatch = useDispatch();
+  const savedPokemon = useSelector((state) => state.pokemon);
+  console.log("pokemonSalvo", savedPokemon);
 
   //armazenando os pokemon em um state
   const getPokemons = (id) => {

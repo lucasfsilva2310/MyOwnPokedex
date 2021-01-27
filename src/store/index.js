@@ -1,8 +1,9 @@
-import { createStore, combineReducers } from "redux";
+import { createStore, combineReducers, applyMiddleware } from "redux";
 import characterReducer from "./modules/descriptionPokemon/reducers";
+import thunk from "redux-thunk";
 
-const reducers = combineReducers({ pokemons: characterReducer });
+const reducers = combineReducers({ pokemon: characterReducer });
 
-const store = createStore(reducers);
+const store = createStore(reducers, applyMiddleware(thunk));
 
 export default store;
