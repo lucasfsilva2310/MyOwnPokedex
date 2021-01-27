@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
-import "./link.css";
+import { LinkContainer } from "./styledLinkContainer";
+
 const Home = () => {
   return (
     <>
-      <Link to="/">
-        <h2 className="navBarItem">Home</h2>
-      </Link>
+      <LinkContainer>
+        <Link to="/">
+          <h2>Home</h2>
+        </Link>
+      </LinkContainer>
     </>
   );
 };

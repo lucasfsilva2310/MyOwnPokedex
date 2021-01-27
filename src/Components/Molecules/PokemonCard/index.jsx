@@ -1,7 +1,6 @@
 import "./Cards.css";
 
 const PokemonCard = ({ pokemon, func }) => {
-  // Sprite pokemon
   let img = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`;
   return (
     <>

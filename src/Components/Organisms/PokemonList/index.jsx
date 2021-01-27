@@ -12,8 +12,6 @@ const PokemonList = () => {
   const [nextPokemonUrl, setNextPokemonUrl] = useState(1);
   const history = useHistory();
   const dispatch = useDispatch();
-  const savedPokemon = useSelector((state) => state.pokemon);
-  console.log("pokemonSalvo", savedPokemon);
 
   //armazenando os pokemon em um state
   const getPokemons = (id) => {
@@ -26,8 +24,8 @@ const PokemonList = () => {
   };
 
   useEffect(() => {
+    //pegar somente 150 pokemon
     if (nextPokemonUrl <= 150) {
-      //se houver menos de 150 pokemon no array
       getPokemons(nextPokemonUrl);
       setNextPokemonUrl(nextPokemonUrl + 1);
     }
