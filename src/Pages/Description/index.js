@@ -9,6 +9,7 @@ import {
   StatsAndOther,
   Stats,
   Characteristics,
+  StatBlock,
 } from "./styled";
 import PokemonCard from "../../Components/Molecules/PokemonCard/index";
 import { useSelector } from "react-redux";
@@ -16,14 +17,18 @@ import { useSelector } from "react-redux";
 const DescriptionPage = () => {
   const pokemon = useSelector((state) => state.pokemon);
   console.log(pokemon); // remover no final
+
   return (
     <>
       <MainHeader />
       <DescriptionContainer>
         <PokemonCardBox>
           <PokemonCard pokemon={pokemon} />
+          <PokemonDescriptionContainer>
+            Description:
+          </PokemonDescriptionContainer>
         </PokemonCardBox>
-        <PokemonDescriptionContainer>Description:</PokemonDescriptionContainer>
+
         <SecondSection>
           <Abilities>
             Abilities:
@@ -38,12 +43,24 @@ const DescriptionPage = () => {
           <StatsAndOther>
             <Stats>
               {pokemon.stats.map((stats, index) => {
-                return <span>{`${stats.stat.name} - ${stats.base_stat}`}</span>;
+                return (
+                  <>
+                    <StatBlock>
+                      <span>{`${
+                        stats.stat.name.charAt(0).toUpperCase() +
+                        stats.stat.name.slice(1)
+                      } `}</span>{" "}
+                      <span>{stats.base_stat}</span>
+                    </StatBlock>{" "}
+                    |
+                  </>
+                );
               })}
             </Stats>
+
             <Characteristics>
               Height: {pokemon.height}
-              Weight: {pokemon.weight}
+              <span></span> Weight: {pokemon.weight}
             </Characteristics>
           </StatsAndOther>
         </SecondSection>
@@ -56,12 +73,12 @@ const DescriptionPage = () => {
 // path: flavor_text_entries[0].flavor_text
 
 // pra pegar descrição das habilidades, entrar no objeto abilites e pegar numero da habilidade
-// https://pokeapi.co/api/v2/ability/${numero}
+// https://pokeapi.co/api/v2/ability/${numeroDaAbilidade}
 //path: Estudar
 
 //Coisas para arrumar:
 //- Div do background nao fica com imagem fixa com relação a responsividade
-//- Ajustar design dos dados na tela description
+//- ajustar fontes e tamanho das fontes
 //- Após tudo isso:
 // colocar descrição das habilidades
 // pensar em inserir inputSearch no Home, acima dos pokemon
