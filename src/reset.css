@@ -88,7 +88,7 @@ video {
   /* display: flex; */
 }
 
-html {
+#root {
   width: 100%;
   height: 100%;
   background-color: rgb(192, 188, 188);

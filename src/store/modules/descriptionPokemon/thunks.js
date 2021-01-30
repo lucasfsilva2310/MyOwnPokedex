@@ -1,6 +1,6 @@
 import { character } from "./actions";
 
-export const CharacterThunk = (pokemon) => async (dispatch, getState) => {
+export const CharacterThunk = (pokemon) => (dispatch, getState) => {
   let info = {
     name: pokemon.name,
     id: pokemon.id,
@@ -11,5 +11,5 @@ export const CharacterThunk = (pokemon) => async (dispatch, getState) => {
     abilities: pokemon.abilities,
   };
 
-  await dispatch(character(info));
+  dispatch(character(info));
 };

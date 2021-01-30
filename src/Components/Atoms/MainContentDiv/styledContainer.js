@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.div`
+  border: 5px solid black;
   background-image: url("https://m.iphoto.net/lA1MR.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;

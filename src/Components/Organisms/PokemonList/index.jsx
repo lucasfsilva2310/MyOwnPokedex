@@ -32,7 +32,6 @@ const PokemonList = () => {
   }, [pokemonList]);
 
   const toDescription = (pokemon) => {
-    console.log(pokemon);
     dispatch(CharacterThunk(pokemon));
     history.push("/description");
   };
@@ -46,7 +45,11 @@ const PokemonList = () => {
       {/* criar uma div aqui parar separar os cards do input */}
       {pokemonList.map((pokemon, index) => {
         return (
-          <PokemonCard pokemon={pokemon} func={() => toDescription(pokemon)} />
+          <PokemonCard
+            key={index}
+            pokemon={pokemon}
+            func={() => toDescription(pokemon)}
+          />
         );
       })}
     </>
