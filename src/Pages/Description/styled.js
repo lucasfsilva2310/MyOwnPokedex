@@ -7,7 +7,7 @@ export const DescriptionContainer = styled.div`
   background-size: 100% 100%;
   width: 80%;
   margin: 0 auto;
-  min-height: 70%;
+  min-height: 100vh;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;

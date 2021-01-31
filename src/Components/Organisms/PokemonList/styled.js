@@ -5,7 +5,8 @@ export const LoadingContainer = styled.div`
   min-height: 100%;
   display: flex;
   color: white;
-  font-size: 2.3rem;
+  font-size: 2.7rem;
   justify-content: center;
   align-items: center;
+  color: black;
 `;

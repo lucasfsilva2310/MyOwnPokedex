@@ -33,11 +33,11 @@ const PokemonList = () => {
 
   const toDescription = (pokemon) => {
     dispatch(CharacterThunk(pokemon));
-    history.push("/description");
+    setTimeout(() => history.push("/description"), 1500);
   };
   //Enquanto estiver armazenando os pokemons
   if (pokemonList.length < 119) {
-    return <LoadingContainer>Loading . . .</LoadingContainer>;
+    return <LoadingContainer>LOADING . . .</LoadingContainer>;
   }
 
   return (

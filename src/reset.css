@@ -91,5 +91,9 @@ video {
 #root {
   width: 100%;
   height: 100%;
-  background-color: rgb(192, 188, 188);
+  /* background-color: rgb(192, 188, 188); */
+  background-image: url("https://vip.socio-corp.jp/wp-content/uploads/sites/3/2020/04/pb-6.jpg?w=640");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
 }

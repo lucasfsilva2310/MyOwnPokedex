@@ -21,37 +21,6 @@ import { useState } from "react";
 
 const DescriptionPage = () => {
   const pokemon = useSelector((state) => state.pokemon);
-  const [description, setDescription] = useState("");
-  const [abilityState, setAbilities] = useState([]);
-
-  const getDescription = (id) => {
-    axios
-      .get(`https://pokeapi.co/api/v2/pokemon-species/${id}`)
-      .then((res) =>
-        setDescription(res.data.flavor_text_entries[0].flavor_text)
-      );
-  };
-  // ARRUMAR REQUISIÇÂO DESCRIÇÂO HABILIDADES
-  //pensar se joga para o thunk, talvez ele nao esteja armazenando devido a isso
-  //pq nao esta armazenando no array?
-  console.log(pokemon);
-  const getAbilities = (abilityLength) => {
-    for (let i = 0; i < abilityLength; i++) {
-      axios.get(pokemon.abilities[i].ability.url).then(
-        (res) => console.log(res.data.flavor_text_entries[0].flavor_text)
-        // setAbilities([
-        //   ...abilityState,
-        //   res.data.flavor_text_entries[0].flavor_text,
-        // ])
-      );
-      console.log(abilityState);
-    }
-  };
-
-  useEffect(() => {
-    getDescription(pokemon.id);
-    getAbilities(pokemon.abilities.length);
-  }, []);
 
   return (
     <>
@@ -61,7 +30,7 @@ const DescriptionPage = () => {
           <PokemonCard pokemon={pokemon} />
           <TitleDescription>Description:</TitleDescription>
           <PokemonDescriptionContainer>
-            {description}
+            {pokemon.description}
           </PokemonDescriptionContainer>
         </PokemonCardBox>
 
@@ -75,8 +44,9 @@ const DescriptionPage = () => {
                     {ability.ability.name.charAt(0).toUpperCase() +
                       ability.ability.name.slice(1)}
                   </AbilityTitles>
-                  <SingleAbility>{}</SingleAbility>
-                  {/* habilidade vai aqui  abil[index]*/}
+                  <SingleAbility>
+                    {pokemon.descriptAbilities[index]}
+                  </SingleAbility>
                 </>
               );
             })}
@@ -124,10 +94,7 @@ const DescriptionPage = () => {
   );
 };
 
-// pra pegar descrição das habilidades, entrar no objeto abilites e pegar numero da habilidade
-// https://pokeapi.co/api/v2/ability/${numeroDaAbilidade}
-//path: Estudar
-
-// - ajustar background diminuido enquanto esta no "loading"
+// mudar cursor pra Loading
+// container de input
 
 export default DescriptionPage;
