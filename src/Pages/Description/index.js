@@ -67,7 +67,6 @@ const DescriptionPage = () => {
                       } `}</span>{" "}
                       <span>{stats.base_stat}</span>
                     </StatBlock>{" "}
-                    |
                   </>
                 );
               })}

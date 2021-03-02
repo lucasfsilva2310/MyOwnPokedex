@@ -38,7 +38,9 @@ const PokemonList = () => {
   };
   //Enquanto estiver armazenando os pokemons
   if (pokemonList.length < 119) {
-    return <LoadingContainer>LOADING . . .</LoadingContainer>;
+    return (
+      <LoadingContainer src="https://i.postimg.cc/vB6Bxc1J/Loading-Cont.png"></LoadingContainer>
+    );
   }
 
   return (

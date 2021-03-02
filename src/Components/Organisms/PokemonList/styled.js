@@ -1,12 +1,7 @@
 import styled from "styled-components";
 
-export const LoadingContainer = styled.div`
-  width: 100%;
-  min-height: 100%;
-  display: flex;
-  color: white;
-  font-size: 2.7rem;
-  justify-content: center;
-  align-items: center;
-  color: white;
+export const LoadingContainer = styled.img`
+  width: 80%;
+  height: 40%;
+  margin-top: 15%;
 `;

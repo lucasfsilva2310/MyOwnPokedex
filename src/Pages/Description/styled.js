@@ -41,9 +41,9 @@ export const PokemonCardBox = styled.div`
 `;
 
 export const SecondSection = styled.div`
-  /* border: 2px solid brown; //marron */
   width: 100%;
   display: flex;
+  padding: 0px 30px 50px 30px;
   flex-direction: row;
   justify-content: space-around;
 `;
@@ -100,7 +100,7 @@ export const Stats = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 85%;
+  width: 95%;
   flex-direction: row;
   font-size: 1.1rem;
   padding: 1%;
@@ -111,13 +111,23 @@ export const Stats = styled.div`
 `;
 
 export const StatBlock = styled.div`
+  /* border: 2px solid red; */
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
+  /* word-break: break-all; */
   align-items: center;
   font-size: 0.9rem;
+  font-weight: 525;
+  padding: 15px 0px;
   .StatTitle {
     font-size: 1.1rem;
+  }
+  @media (max-width: 1080px) {
+    .StatTitle {
+      font-size: 0.9rem;
+    }
   }
 `;
 
