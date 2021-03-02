@@ -22,6 +22,10 @@ import { useState } from "react";
 const DescriptionPage = () => {
   const pokemon = useSelector((state) => state.pokemon);
 
+  useEffect(() => {
+    document.body.style.cursor = "default";
+  }, []);
+
   return (
     <>
       <MainHeader />

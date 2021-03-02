@@ -32,8 +32,9 @@ const PokemonList = () => {
   }, [pokemonList]);
 
   const toDescription = (pokemon) => {
+    document.body.style.cursor = "wait";
     dispatch(CharacterThunk(pokemon));
-    setTimeout(() => history.push("/description"), 1500);
+    setTimeout(() => history.push("/description"), 2000);
   };
   //Enquanto estiver armazenando os pokemons
   if (pokemonList.length < 119) {

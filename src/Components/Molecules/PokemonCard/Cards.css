@@ -2,12 +2,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin: 40px 30px;
   flex-direction: column;
   border: 2px solid black;
   border-radius: 10px;
+  width: 180px;
   height: 220px;
   cursor: pointer;
+  transition: all 0.4s;
 }
 
 .circle-icon {
@@ -19,12 +21,11 @@
 .pokemonSprite {
   width: 135px;
   height: 130px;
-  transition: 0.3s;
 }
 
-.pokemonSprite:hover {
-  width: 140px;
-  height: 135px;
+.containerPokemon:hover {
+  width: 185px;
+  height: 222px;
 }
 
 .pokemonName {

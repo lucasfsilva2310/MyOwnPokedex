@@ -8,5 +8,5 @@ export const LoadingContainer = styled.div`
   font-size: 2.7rem;
   justify-content: center;
   align-items: center;
-  color: black;
+  color: white;
 `;
