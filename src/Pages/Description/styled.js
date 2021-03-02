@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const DescriptionContainer = styled.div`
-  border: 5px solid black;
+  border: 5px 6px 5px 5px solid black;
   background-image: url("https://i.ibb.co/vmVY6HY/rotom.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
