@@ -1,6 +1,10 @@
 ![App Title](/MyOwnPokedexFigma.png "My Own Pokédex")
 
+![Pokedex Mainpage](https://i.postimg.cc/6Q1dqKQb/pokedex-Mainpage.png)
+
 This is a simple project containing all of the first 151 pokémon, and their description/stats. It´s just a simple project for studying purposes :)
+
+![Description Page](https://i.postimg.cc/hvVx271N/descriptionpokedex.png)
 
 ## Getting Started
 
