@@ -8,7 +8,7 @@ This is a simple project containing all of the first 151 pokémon, and their des
 
 ## Getting Started
 
-I´m using the [PokeAPI]("https://pokeapi.co/") for this project. So every information about pokemon inside this app was request whitin this API.
+I´m using the [PokeAPI](https://pokeapi.co/) for this project. So every information about pokemon inside this app was request whitin this API.
 
 I also organized every component using the [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/) design system, which I found a little bit confusing at first, but now I really enjoy using it.
 
