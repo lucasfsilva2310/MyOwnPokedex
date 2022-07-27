@@ -5,7 +5,6 @@ import { LoadingContainer } from "./styled";
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { CharacterThunk } from "../../../store/modules/descriptionPokemon/thunks";
-import { useSelector } from "react-redux";
 
 const PokemonList = () => {
   const [pokemonList, setPokemonList] = useState([]);
@@ -24,7 +23,7 @@ const PokemonList = () => {
   };
 
   useEffect(() => {
-    //pegar somente 150 pokemon
+    //get only the first 150 pokemon
     if (nextPokemonUrl <= 150) {
       getPokemons(nextPokemonUrl);
       setNextPokemonUrl(nextPokemonUrl + 1);
@@ -36,7 +35,7 @@ const PokemonList = () => {
     dispatch(CharacterThunk(pokemon));
     setTimeout(() => history.push("/description"), 2000);
   };
-  //Enquanto estiver armazenando os pokemons
+
   if (pokemonList.length < 119) {
     return (
       <LoadingContainer src="https://i.postimg.cc/vB6Bxc1J/Loading-Cont.png"></LoadingContainer>
@@ -45,7 +44,6 @@ const PokemonList = () => {
 
   return (
     <>
-      {/* criar uma div aqui parar separar os cards do input */}
       {pokemonList.map((pokemon, index) => {
         return (
           <PokemonCard

@@ -14,6 +14,3 @@ const Home = () => {
 };
 
 export default Home;
-
-// colocar cada atomo no seu lugar, e
-//criar uma molecula com div e rota dentro
